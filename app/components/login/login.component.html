@@ -1,0 +1,15 @@
+<div class="text-center">
+  <form #loginForm="ngForm" class="form-signin" (ngSubmit)="login(loginForm.value)">
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <div class="alert alert-danger" role="alert" *ngIf="mode==1">
+      <strong>Bad Credentials</strong> <br> Incorrect username or password
+    </div>
+    <label for="inputUsername" class="sr-only">Email address</label>
+    <input type="text" id="inputEmail" class="form-control" placeholder="Username" name="username" ngModel="">
+
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" ngModel="">
+
+    <button type="submit" class="btn btn-lg btn-primary btn-block">Log In</button>
+  </form>
+</div>
